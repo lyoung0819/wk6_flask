@@ -14,4 +14,16 @@ def index():
 
 @app.route('/test')
 def test():
-    return 'Test'
+
+    my_dicts = []
+    for i in range(5):
+        a_dict = {
+            'id': i+1,
+            'key' : 'value',
+            'name' : 'Brian'
+    }
+        my_dicts.append(a_dict)
+
+    return my_dicts
+
+## return my_dicts, 405 -> would change the status code to 405, can override/change status code on reqs 
